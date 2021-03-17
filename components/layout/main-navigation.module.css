@@ -1,0 +1,16 @@
+
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+}
+.navbar ul li {
+    padding: 2rem;
+}
+.navbar ul li span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+
+}

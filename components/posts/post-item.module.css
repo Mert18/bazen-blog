@@ -1,0 +1,14 @@
+
+.post {
+    padding: 0 2rem;
+
+    font-size: 1.2rem;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.post:hover {
+    text-decoration: underline;
+}
