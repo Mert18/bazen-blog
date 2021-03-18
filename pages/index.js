@@ -1,30 +1,27 @@
 import { Fragment } from "react";
-import Hero from '../components/home-page/hero'
-import FeaturedPosts from '../components/home-page/featured-posts'
+import Hero from '../components/home-page/hero';
+import FeaturedPosts from '../components/home-page/featured-posts';
+import { getFeaturedPosts } from '../lib/posts-util.js';
 
-const dummy_posts = [
-    {
-        slug: 'sanki-oyleymis',
-        title: "Sanki öyleymiş gibi",
-        text: "Yanılmak her zaman haklı mıdır?",
-        date: new Date()
-    },
-    {
-        slug: 'sanki-oylsseymis',
-        title: "Sanki öyleymiş gibi",
-        text: "Yanılmak her zaman haklı mıdır?",
-        date: new Date()
-    }
-];
 
-function HomePage() {
+function HomePage(props) {
 
+    console.log(props.posts)
     return (
         <Fragment>
             <Hero />
-            <FeaturedPosts posts={dummy_posts} />
+            <FeaturedPosts posts={props.posts} />
         </Fragment>
-    )
+    );
+}
+
+export function getStaticProps() {
+    const featuredPosts = getFeaturedPosts();
+    return {
+        props: {
+            posts: featuredPosts
+        }
+    }
 }
 
 export default HomePage;

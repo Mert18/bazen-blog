@@ -6,17 +6,15 @@ import ReactMarkdown from 'react-markdown';
 const DUMMY_POST = {
     slug: "sthstshst",
     title: "erererer",
-    image: 'imageone.jpg',
     content: '## here are things',
-    date: '20-03-2000',
-}
+    date: '2000-20-03',
+};
 
 function PostContent() {
-    const imagePath = `/images/posts/${DUMMY_POST.slug}/${DUMMY_POST.image}`;
 
     return (
         <article>
-            <PostHeader title={DUMMY_POST.title} image={imagePath} />
+            <PostHeader title={DUMMY_POST.title} />
             <ReactMarkdown>
                 {DUMMY_POST.content}
             </ReactMarkdown>

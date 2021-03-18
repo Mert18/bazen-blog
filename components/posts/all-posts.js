@@ -3,7 +3,7 @@ import PostsGrid from './posts-grid';
 
 function AllPosts(props) {
     return (
-        <section class={classes.posts}>
+        <section className={classes.posts}>
             <h1>Tüm Gönderiler</h1>
             <PostsGrid posts={props.posts} />
         </section>

@@ -1,27 +1,22 @@
 
 import AllPosts from '../../components/posts/all-posts';
-
-const dummy_posts = [
-    {
-        slug: 'sanki-oyleymis',
-        title: "Sanki öyleymiş gibi",
-        text: "Yanılmak her zaman haklı mıdır?",
-        date: new Date()
-    },
-    {
-        slug: 'sanki-oylsseymis',
-        title: "Sanki öyleymiş gibi",
-        text: "Yanılmak her zaman haklı mıdır?",
-        date: new Date()
-    }
-];
+import { getAllPosts } from '../../lib/posts-util';
 
 function AllPostsPage(props) {
-
     return (
-        <AllPosts posts={dummy_posts} />
+        <AllPosts posts={props.posts} />
     )
 
+}
+
+export function getStaticProps() {
+    const allPosts = getAllPosts();
+
+    return {
+        props: {
+            posts: allPosts
+        }
+    };
 }
 
 export default AllPostsPage;
