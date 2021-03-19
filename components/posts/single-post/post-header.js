@@ -6,7 +6,7 @@ function PostHeader(props) {
 
     return (
         <header className={classes.header}>
-            <h1>{title}</h1>
+            <h1 className={classes.title}>{title}</h1>
         </header>
     )
 }

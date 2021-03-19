@@ -3,20 +3,20 @@ import PostHeader from './post-header';
 import classes from './post-content.module.css'
 import ReactMarkdown from 'react-markdown';
 
-const DUMMY_POST = {
-    slug: "sthstshst",
-    title: "erererer",
-    content: '## here are things',
-    date: '2000-20-03',
-};
 
-function PostContent() {
+function PostContent(props) {
+
+    const { post } = props;
+    const formattedDate = new Date(post.date).toLocaleDateString('tr-TR');
 
     return (
-        <article>
-            <PostHeader title={DUMMY_POST.title} />
+
+        <article className={classes.singlepost}>
+            <PostHeader title={post.title} />
+            <h2>{formattedDate}</h2>
+
             <ReactMarkdown>
-                {DUMMY_POST.content}
+                {post.content}
             </ReactMarkdown>
         </article>
     )

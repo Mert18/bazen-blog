@@ -6,7 +6,6 @@ import { getFeaturedPosts } from '../lib/posts-util.js';
 
 function HomePage(props) {
 
-    console.log(props.posts)
     return (
         <Fragment>
             <Hero />

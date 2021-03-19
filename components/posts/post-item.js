@@ -4,7 +4,6 @@ import classes from './post-item.module.css';
 
 function PostItem(props) {
     const { slug, title, text, date } = props.post;
-    console.log(date);
 
     const linkPath = `/posts/${slug}`;
 

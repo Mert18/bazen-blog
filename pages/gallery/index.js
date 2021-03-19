@@ -1,5 +1,4 @@
 
-
 function GalleryPage() {
 
     return (
