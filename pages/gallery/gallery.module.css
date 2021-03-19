@@ -1,0 +1,34 @@
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(16, 5vw);
+    padding: 2rem;
+    grid-gap: 20px;
+    text-align: center;
+}
+.gallery > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.one {
+    grid-column: 1 / 6;
+    grid-row: 1 / 6;
+}
+.two {
+    grid-column: 6 / 8;
+    grid-row: 1 / 9;
+}
+
+.three {
+    grid-column: 1 / 3;
+    grid-row: 6 / -1;
+}
+
+.four {
+    grid-column: 3 / 6;
+    grid-row: 6 / -1;
+}
