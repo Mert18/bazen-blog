@@ -8,27 +8,23 @@
     grid-gap: 20px;
     text-align: center;
 }
+
 .gallery > * {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .one {
-    grid-column: 1 / 6;
+    grid-column: 1 / -1;
     grid-row: 1 / 6;
 }
 .two {
-    grid-column: 6 / 8;
-    grid-row: 1 / 9;
+    grid-column: 2 / 6;
+    grid-row: 6 / 14;
 }
 
 .three {
-    grid-column: 1 / 3;
-    grid-row: 6 / -1;
-}
-
-.four {
-    grid-column: 3 / 6;
-    grid-row: 6 / -1;
+    grid-column: 5 / 8;
+    grid-row: 6 / 13;
 }

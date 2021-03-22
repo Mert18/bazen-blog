@@ -6,12 +6,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --color-primary: #473335;
-  --color-secondary: #000000;
   /* 548687 */
-  background-color: var(--color-primary);
+  background-color: #e7e7e6;
   font-family: 'Josefin Sans', sans-serif;
-  color: #FFFFC7;
+  color: #011627;
   font-weight: 600;
 }
 

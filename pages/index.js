@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Hero from '../components/home-page/hero';
-import FeaturedPosts from '../components/home-page/featured-posts';
+import HomeContent from '../components/home-page/home-content';
 import { getFeaturedPosts } from '../lib/posts-util.js';
 
 
@@ -9,7 +9,7 @@ function HomePage(props) {
     return (
         <Fragment>
             <Hero />
-            <FeaturedPosts posts={props.posts} />
+            <HomeContent posts={props.posts} />
         </Fragment>
     );
 }

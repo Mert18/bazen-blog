@@ -30,14 +30,6 @@ function GalleryPage() {
                 />
             </div>
 
-            <div className={`${classes.four} ${classes.small}`}>
-                <Image
-                    src="/images/4.jpg"
-                    width={400}
-                    height={800}
-                />
-            </div>
-
 
         </div>
     )

@@ -1,14 +1,21 @@
 
 .post {
-    padding: 0 2rem;
-
     font-size: 1.4rem;
+    width: 100%;
+    border-radius: .5rem;
+    transition: all .4s;
 }
 
 .content {
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post:hover {
+    transition: all .4s;
+    transform: scale(1.05);
     text-decoration: underline;
 }

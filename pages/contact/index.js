@@ -1,0 +1,54 @@
+
+import { useState } from 'react';
+import Image from 'next/image';
+import classes from './contact.module.css';
+
+
+function Contact() {
+
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    function sendMessageHandler(e) {
+        e.preventDefault();
+
+        fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                message
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+
+        setEmail('');
+        setMessage('');
+    }
+    return (
+        <section className={classes.contact}>
+            <div className={classes.left}>
+                <form autoComplete="off" className={classes.form} onSubmit={sendMessageHandler}>
+                    <div className={classes.element}>
+                        <label htmlFor="email">Email <span>(Geri dönüş beklemiyorsanız boş bırakabilirsiniz.)</span></label>
+                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+
+                    <div className={classes.element}>
+                        <label htmlFor="message">Mesajınız</label>
+                        <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+                    </div>
+                    <button type="submit">Gönder</button>
+                </form>
+            </div>
+
+            <div className={classes.right}>
+                <Image src="/images/bird.svg" width={626} height={474} />
+            </div>
+
+        </section>
+    )
+}
+
+export default Contact
