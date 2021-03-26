@@ -1,21 +1,20 @@
 
 .post {
-    font-size: 1.4rem;
-    width: 100%;
-    border-radius: .5rem;
-    transition: all .4s;
+    font-size: 1.5rem;
+    width: 50%;
+    border-radius: 1rem;
+    background-color: white;
 }
 
 .content {
-    padding: 1rem;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 2rem;
 }
 
 .post:hover {
-    transition: all .4s;
-    transform: scale(1.05);
-    text-decoration: underline;
+  color: #E0FBFC;
+  background-color: #293241;
+
 }
