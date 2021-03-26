@@ -8,9 +8,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   /* 548687 */
   font-family: 'Josefin Sans', sans-serif;
-  color: #293241;
-  background-color: #E0FBFC;
+  color: white;
+  background-color: #66042d;
   font-weight: 600;
+  list-style: none;
 }
 
 a {

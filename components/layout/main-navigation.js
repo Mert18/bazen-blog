@@ -8,9 +8,9 @@ function MainNavigation() {
             <nav className={classes.navbar}>
                 <ul>
                     <li><Link href="/"><span>Ana Sayfa</span></Link></li>
-                    <li><Link href="/posts"><span>Blog</span></Link></li>
+
                     <li><Link href="/gallery"><span>Galeri</span></Link></li>
-                    <li><Link href="/art"><span>Art</span></Link></li>
+                    <li><Link href="/art"><span>Sanat</span></Link></li>
                     <li><Link href="/contact"><span>İletişim</span></Link></li>
                 </ul>
             </nav>

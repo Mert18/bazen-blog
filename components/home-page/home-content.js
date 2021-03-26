@@ -4,7 +4,15 @@ import classes from './home-content.module.css';
 function HomeContent(props) {
     return (
         <section className={classes.home}>
-            <PostsGrid posts={props.posts} />
+            <div className={classes.posts}>
+                <PostsGrid posts={props.posts} />
+            </div>
+            <div className={classes.gallery}>
+
+            </div>
+            <div className={classes.art}>
+
+            </div>
         </section>
     )
 }

@@ -1,9 +1,7 @@
 
 .post {
     font-size: 1.5rem;
-    width: 50%;
     border-radius: 1rem;
-    background-color: white;
 }
 
 .content {
@@ -14,7 +12,5 @@
 }
 
 .post:hover {
-  color: #E0FBFC;
-  background-color: #293241;
-
+  text-decoration: underline;
 }
