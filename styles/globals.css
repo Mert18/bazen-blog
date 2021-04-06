@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 html,
 body {
   padding: 0;
@@ -7,9 +6,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   /* 548687 */
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: white;
-  background-color: #66042d;
+  background-color: #2B2B3D;
   font-weight: 600;
   list-style: none;
 }

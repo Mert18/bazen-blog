@@ -39,7 +39,7 @@ function Contact() {
                         <label htmlFor="message">Mesajınız</label>
                         <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
                     </div>
-                    <button type="submit">Gönder</button>
+                    <button className="form-btn" type="submit">Gönder</button>
                 </form>
             </div>
 

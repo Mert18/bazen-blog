@@ -1,17 +1,38 @@
 
 
-.navbar ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    height: 8vh;
-    font-size: 1.2rem;
-}
-.navbar ul li {
-    padding: 2rem;
-}
-.navbar ul li span:hover {
-    cursor: pointer;
-    text-decoration: underline;
 
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .2rem;
+    background-color: #E89873;
+    height: 4em;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    width: 50%;
+}
+.navigation > * {
+    padding: .9rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: all .2s;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2B2B3D;
+}
+.navigation span:hover {
+    color: #525270;
+    cursor: pointer;
+}
+
+.selected {
+    color: #525270;
 }

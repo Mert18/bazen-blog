@@ -5,15 +5,13 @@ import Link from 'next/link';
 function MainNavigation() {
     return (
         <header className={classes.header}>
-            <nav className={classes.navbar}>
-                <ul>
-                    <li><Link href="/"><span>Ana Sayfa</span></Link></li>
-
-                    <li><Link href="/gallery"><span>Galeri</span></Link></li>
-                    <li><Link href="/art"><span>Sanat</span></Link></li>
-                    <li><Link href="/contact"><span>İletişim</span></Link></li>
-                </ul>
-            </nav>
+            <div className={classes.navigation}>
+                <Link activeClassName="selected" href="/"><span>ANA SAYFA</span></Link>
+                <Link activeClassName="selected" href="/posts"><span>BLOG</span></Link>
+                <Link activeClassName="selected" href="/gallery"><span>GALERİ</span></Link>
+                <Link activeClassName="selected" href="/art"><span>SANAT</span></Link>
+                <Link activeClassName="selected" href="/contact"><span>İLETİŞİM</span></Link>
+            </div>
         </header>
     )
 }
