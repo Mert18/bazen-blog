@@ -1,4 +1,3 @@
-import { MongoClient } from 'mongodb';
 
 import sgMail from '@sendgrid/mail';
 
