@@ -7,12 +7,6 @@ function HomeContent(props) {
             <div className={classes.posts}>
                 <PostsGrid posts={props.posts} />
             </div>
-            <div className={classes.gallery}>
-
-            </div>
-            <div className={classes.art}>
-
-            </div>
         </section>
     )
 }

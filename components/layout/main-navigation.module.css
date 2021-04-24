@@ -26,10 +26,11 @@
     transition: all .2s;
     text-transform: uppercase;
     font-weight: 600;
-    color: #2B2B3D;
+    color: rgb(75, 45, 21);
+
 }
 .navigation span:hover {
-    color: #525270;
+    color: white;
     cursor: pointer;
 }
 

@@ -42,11 +42,6 @@ function Contact() {
                     <button className="form-btn" type="submit">Gönder</button>
                 </form>
             </div>
-
-            <div className={classes.right}>
-                <Image src="/images/bird.svg" width={626} height={474} />
-            </div>
-
         </section>
     )
 }
