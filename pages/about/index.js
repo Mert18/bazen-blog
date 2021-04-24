@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
 
 import classes from './about.module.css';
@@ -21,7 +21,6 @@ const About = () => {
     }
 
     useEffect(() => {
-        
         getAllData();
     }, [])
 
@@ -30,24 +29,25 @@ const About = () => {
         <section className={classes.about}>
             <div className={classes.about__data}>
                 <div className={classes.data__title}>
-                    <h2>Nobody asked me whether I'm happy or not. So please don't rely on world happiness index. Mine is shown below.</h2>
+                    <h2>Dünya Mutluluk Endeksi ile hiçbir ilişkim yoktur. Benim mutluluk endeksim aşağıdadır.</h2>
                 </div>
                 <div className={classes.data__chart}>
                     <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
-                        <Line type="monotone" dataKey="game" stroke="magenta" />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="leisure" stroke="blue" />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="happiness" stroke="red" />
+                        <Line type="monotone" dataKey="game" stroke="magenta" strokeDasharray="7 7" dot={false} />
+                        <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" dot={false} />
+                        <Line type="monotone" strokeDasharray="7 7" dataKey="leisure" stroke="blue" dot={false} />
+                        <Line type="monotone"  dataKey="happiness" stroke="orange" strokeWidth={3} dot={false} />
                         <CartesianGrid stroke="#ccc" />
                         <XAxis dataKey="date" />
                         <YAxis />
-                        <Tooltip />
+                        <Legend />
+                        <Tooltip  />
                     </LineChart>
                 </div>
             </div>
 
             <div className={classes.aboutstack}>
-                <h2>I know the following and I've used them in a project before.</h2>
+                <h2>Bunları biliyorum ve daha önce bir projede kullandım.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -77,7 +77,7 @@ const About = () => {
 
                 </div>
 
-                <h2>I'm familiar and still learning the following technologies</h2>
+                <h2>Bunlara aşinalığım var ve / veya öğrenme aşamasındayım.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -95,7 +95,7 @@ const About = () => {
                     
                 </div>
 
-                <h2>Technologies that I am planning to learn in the near future.</h2>
+                <h2>Yakın gelecekte bunları öğrenmeyi planlıyorum.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -113,14 +113,11 @@ const About = () => {
             </div>
 
             <div className={classes.really}>
-                <h2>But really, who am I?</h2>
+                <h2>Kimim ben?</h2>
                 <div className={classes.reallytext}>
-                    <p>I was born in southernmost city of Turkey, Hatay.</p><br />
-                    <p>My curiosity about computers and games pushed me to study a familiar field, Computer Engineering.</p><br />
-                    <p>For that reason I moved to Ankara, Capital of Turkey, to study Computer Engineering.</p><br />
-                    <p>In May 2020, a stranger walked into my Discord room and started talking about his website homework.</p><br />
-                    <p>This is where I met Web Development.</p><br />
-
+                    <p>20 Mart 2000 yılında Hatay'da doğdum.</p><br />
+                    <p>Bilgisayarlara olan merakımdan dolayı 2018 Haziranda Gazi Üniversitesi'nde Bilgisayar Mühendisliği bölümüne giriş yaptım.</p><br />
+                    <p>Mayıs 2020'de tamamen tesadüfen karşılaştığım birisi tarafından web geliştirmeyle tanıştım ve o zamandan beri öğreniyorum.</p><br />
                 </div>
             </div>
         </section>
