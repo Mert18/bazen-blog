@@ -29,7 +29,7 @@ const About = () => {
         <section className={classes.about}>
             <div className={classes.about__data}>
                 <div className={classes.data__title}>
-                    <h2>Dünya Mutluluk Endeksi ile hiçbir ilişkim yoktur. Benim mutluluk endeksim aşağıdadır.</h2>
+                    <h2>Mutluluk Endeksim</h2>
                 </div>
                 <div className={classes.data__chart}>
                     <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
@@ -80,6 +80,9 @@ const About = () => {
                 <h2>Bunlara aşinalığım var ve / veya öğrenme aşamasındayım.</h2>
 
                 <div className={classes.aboutstack__stack}>
+                <div className={classes.tech}>
+                        <img src="/images/icons/php-1.svg" width="100px" alt="postgresql icon" />
+                    </div>
                     <div className={classes.tech}>
                         <img src="/images/icons/postgresql.svg" width="100px" alt="postgresql icon" />
                     </div>
@@ -98,9 +101,7 @@ const About = () => {
                 <h2>Yakın gelecekte bunları öğrenmeyi planlıyorum.</h2>
 
                 <div className={classes.aboutstack__stack}>
-                    <div className={classes.tech}>
-                        <img src="/images/icons/php-1.svg" width="100px" alt="postgresql icon" />
-                    </div>
+                   
 
                     <div className={classes.tech}>
                         <img src="/images/icons/typescript.svg" width="100px" alt="linux icon" />
