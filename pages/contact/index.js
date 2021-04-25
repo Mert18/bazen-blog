@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import Image from 'next/image';
 import classes from './contact.module.css';
 
 
@@ -31,7 +30,7 @@ function Contact() {
             <div className={classes.left}>
                 <form autoComplete="off" className={classes.form} onSubmit={sendMessageHandler}>
                     <div className={classes.element}>
-                        <label htmlFor="email">Email <span>(Geri dönüş beklemiyorsanız boş bırakabilirsiniz.)</span></label>
+                        <label htmlFor="email">Email</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
 

@@ -13,6 +13,10 @@ async function handler(req, res) {
             res.status(422).json({ message: 'Mesaj kısmı boş olmamalıdır.' })
             return;
         }
+        if (!email){
+          res.status(422).json({ message: 'Email kısmı boş olmamalıdır.'})
+          return;
+        }
 
         const newMessage = {
             email,
@@ -23,7 +27,7 @@ async function handler(req, res) {
             to: 'mertuygur02@gmail.com', // Change to your recipient
             from: 'mertuygur44@outlook.com', // Change to your verified sender
             subject: 'Türkçe Blog Sitesinden',
-            text: `${newMessage.email}`,
+            text: `${newMessage.email} Mert.`,
             html: `${newMessage.email} - ${newMessage.message}`,
           }
           sgMail
