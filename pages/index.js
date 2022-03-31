@@ -1,23 +1,19 @@
-import styles from "../styles/Home.module.css";
+import classes from "../styles/Home.module.css";
 import fs from "fs";
 import matter from "gray-matter";
-import Link from "next/link";
+import BlogPost from "../components/BlogPost";
 
 export default function Home({ posts }) {
   return (
-    <div className={styles.container}>
-      <h1>zaten</h1>
-      <ul>
+    <div className={classes.container}>
+      <ul className={classes.bloglist}>
         {posts.map(({ slug, frontmatter }) => (
           <li key={frontmatter.title}>
-            <Link href={`/blog/${slug}`}>
-              <a>
-                <h1 className="p-4">{frontmatter.title}</h1>
-              </a>
-            </Link>
+            <BlogPost slug={slug} frontmatter={frontmatter} />
           </li>
         ))}
       </ul>
+      <div className={classes.blank}></div>
     </div>
   );
 }

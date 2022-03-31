@@ -1,0 +1,43 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main theme";
+}
+
+.main{
+  grid-area: main;
+}
+
+.theme {
+  grid-area: theme;
+  background: var(--secondary);
+}
+
+
+.buttons {
+  position: fixed;
+  bottom: 50px;
+  right: 200px;
+  list-style: none;
+}
+
+.buttons li {
+  transition: all .3s ease;
+}
+
+.buttons li:hover {
+  cursor: pointer;
+  color: var(--tertiary);
+  transition: all .3s ease;
+}
+
+.buttons li a {
+  transition: all .3s ease;
+}
+
+.buttons li a:hover{
+  color: var(--tertiary);
+  transition: all .3s ease;
+
+}

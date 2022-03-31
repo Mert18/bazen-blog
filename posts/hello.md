@@ -1,11 +1,9 @@
 ---
-title: 'Next.js page options and how they work'
-metaTitle: 'Next.js page options and how they work'
-metaDesc: 'How to use pages in Next.js exploring the options'
-socialImage: images/22-09-2021.jpg
-date: '2021-09-22'
+title: 'Karşılaşmak'
+desc: 'Raslantısal, öylece ve beklenmedik bir anda.'
+date: '31 Mart 2022'
 tags:
-  - nextjs
+  - Hayat 
 ---
 
 # The main content
