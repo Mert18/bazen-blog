@@ -13,7 +13,6 @@ export default function Home({ posts }) {
           </li>
         ))}
       </ul>
-      <div className={classes.blank}></div>
     </div>
   );
 }

@@ -29,8 +29,9 @@ export default function Layout({ children }) {
 
   return (
     <div className={classes.layout}>
+      <div className={classes.left}></div>
       <main className={classes.main}>{children}</main>
-      <div className={classes.theme}></div>
+      <div className={classes.right}></div>
       <ul className={classes.buttons}>
         {visible ? (
           <li onClick={scrollToTop}>

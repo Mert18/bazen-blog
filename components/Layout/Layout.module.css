@@ -1,17 +1,19 @@
 .layout {
   display: grid;
-  grid-template-columns: 1fr 60px;
+  grid-template-columns: 30px 1fr 40px;
   grid-template-rows: 1fr;
-  grid-template-areas: "main theme";
+  grid-template-areas: "left main right";
+}
+
+.left {
+  background: var(--flavor2);
+}
+.right{
+  background: var(--flavor2);
 }
 
 .main{
   grid-area: main;
-}
-
-.theme {
-  grid-area: theme;
-  background: var(--secondary);
 }
 
 
