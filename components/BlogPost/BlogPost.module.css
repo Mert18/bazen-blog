@@ -14,7 +14,7 @@
 .divider {
   margin-top: 1.5rem;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: radial-gradient(50% 50% at 50% 50%, #6BAFE1 0%, rgba(204, 90, 90, 0.98) 100%);
 }
 
@@ -24,12 +24,12 @@
 }
 
 .desc {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 
 .title {
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   margin-bottom: -0.15rem;
   font-weight: 300;
 }

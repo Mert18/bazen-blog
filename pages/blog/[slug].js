@@ -2,25 +2,38 @@ import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
 import classes from "./Blog.module.css";
+import Head from "next/head";
 
 export default function Blog({ frontmatter, content }) {
   return (
-    <div className={classes.post}>
-      <div className={classes.content}>
-        <section className={classes.header}>
-          <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.desc}</p>
-          <p className={classes.date}>{frontmatter.date}</p>
+    <>
+      <Head>
+        <title>{frontmatter.title}</title>
+        <meta name="description" content="Hayata dair düşünceler, denemeler." />
+        <meta property="og:title" content="Zaten" />
+        <meta property="og:description" content="Zaten" />
+        <meta property="og:url" content="https://merd.blog/" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-          <div className={classes.divider}> </div>
-        </section>
+      <div className={classes.post}>
+        <div className={classes.content}>
+          <section className={classes.header}>
+            <h1>{frontmatter.title}</h1>
+            <p>{frontmatter.desc}</p>
+            <p className={classes.date}>{frontmatter.date}</p>
 
-        <section
-          className={classes.text}
-          dangerouslySetInnerHTML={{ __html: md().render(content) }}
-        />
+            <div className={classes.divider}> </div>
+          </section>
+
+          <section
+            className={classes.text}
+            dangerouslySetInnerHTML={{ __html: md().render(content) }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

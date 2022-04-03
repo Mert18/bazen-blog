@@ -31,18 +31,17 @@ export default function Layout({ children }) {
     <div className={classes.layout}>
       <div className={classes.left}></div>
       <main className={classes.main}>{children}</main>
-      <div className={classes.right}></div>
       <ul className={classes.buttons}>
         {visible ? (
           <li onClick={scrollToTop}>
-            <p>UP</p>
+            <p>En Üst</p>
           </li>
         ) : (
           ""
         )}
 
         <li>
-          <Link href="/">HOME</Link>
+          <Link href="/">Ana Sayfa</Link>
         </li>
       </ul>
     </div>

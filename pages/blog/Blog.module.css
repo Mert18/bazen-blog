@@ -10,7 +10,7 @@
   grid-area: content;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 30vh 1fr;
+  grid-template-rows: 40vh 1fr;
   grid-template-areas:
     "header header header"
     ". text .";
@@ -18,22 +18,25 @@
 
 .header {
   grid-area: header;
-  background: var(--flavor);
+  background: var(--primary);
   padding: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .header h1 {
   font-size: 4rem;
   font-weight: 900;
+  color: var(--flavor3);
 }
 
 .header p{
   font-size: 1.4rem;
   font-weight: 300;
+  color: var(--secondary);
 }
 
 .date {
@@ -50,22 +53,29 @@
 
 .text {
   grid-area: text;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  padding: 1rem;
   line-height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-left: 3rem;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .content {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30vh 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 40vh 1fr;
     grid-template-areas:
-      "header header"
-      "text text";
+      "header header header"
+      ". text .";
   }
 }
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 40vh 1fr;
+    grid-template-areas:
+      "header header header"
+      ". text .";
+  }
+}
+
