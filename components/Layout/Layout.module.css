@@ -1,8 +1,18 @@
 .layout {
   display: grid;
-  grid-template-columns: 30px 1fr ;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left main .";
+  grid-template-columns: 30px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "left main";
+}
+
+@media(max-width: 800px){
+  .layout{
+    grid-template-columns: auto;
+    grid-template-rows: 30px auto;
+    grid-template-areas: 
+    "left"
+    "main";
+  }
 }
 
 .left {
@@ -20,6 +30,15 @@
   bottom: 50px;
   right: 200px;
   list-style: none;
+}
+
+@media(max-width: 1250px){
+  .buttons{
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    padding: .5rem 1rem;
+  }
 }
 
 .buttons li {

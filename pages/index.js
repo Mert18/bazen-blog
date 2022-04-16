@@ -8,7 +8,7 @@ export default function Home({ posts }) {
   return (
     <div className={classes.container}>
       <Head>
-        <title>Zaten</title>
+        <title>Bazen</title>
         <meta
           name="description"
           content="Hayata dair düşünceler, denemeler."
@@ -22,8 +22,8 @@ export default function Home({ posts }) {
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={classes.zaten}>
-        <h1>zaten.blog</h1>
+      <div className={classes.bazen}>
+        <h1>bazen.blog</h1>
       </div>
       <ul className={classes.bloglist}>
         {posts.map(({ slug, frontmatter }) => (
