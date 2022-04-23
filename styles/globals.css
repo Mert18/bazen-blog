@@ -9,9 +9,10 @@
   --flavor2: #985151;
   --flavor3: #8b0024;
 
-  --fs-xl: clamp(1.2rem, 5vw + 1rem, 5rem);
-  --fs-600: clamp(1.2rem, 1.5vw + 1rem, 2.5rem);
-  --fs-400: clamp(.8rem, .6vw + .7rem, 2rem);
+  --fs-xl: clamp(1.2rem, 2vw + 1rem, 5rem);
+  --fs-600: clamp(1.2rem, 1vw + 1rem, 2.5rem);
+  --fs-500: clamp(.8rem, .3vw + .7rem, 2rem);
+  --fs-400: clamp(.8rem, .2vw + .7rem, 2rem);
 }
 
 html,
