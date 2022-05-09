@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 25vh 1fr;
   grid-template-areas:
-    "bazen bazen bazen"
-    "bloglist bloglist .";
+    ". bazen ."
+    ". bloglist .";
   min-height: 101vh;
 }
 
