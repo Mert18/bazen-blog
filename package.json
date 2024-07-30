@@ -1,7 +1,8 @@
 {
-  "name": "merd-blog",
+  "name": "bazen-blog",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.6",
+    "autoprefixer": "10.4.14",
     "gray-matter": "^4.0.3",
-    "markdown-it": "^12.3.2",
-    "next": "12.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "13.4.17",
+    "next-contentlayer": "^0.3.4",
+    "postcss": "^8",
+    "react": "^18",
+    "react-dom": "^18",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.9.8",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
+    "shiki": "^0.14.2",
+    "tailwindcss": "^3.4.1",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6"
   },
   "devDependencies": {
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.2"
+    "typescript": "5.5.4"
   }
 }

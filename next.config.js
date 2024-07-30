@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+import { withContentlayer } from 'next-contentlayer'
 
-module.exports = nextConfig
+const nextConfig = {
+    images: {
+        domains: ["picsum.photos"]
+    }
+}
+export default withContentlayer(nextConfig)
