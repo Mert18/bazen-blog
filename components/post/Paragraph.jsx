@@ -1,12 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Paragraph = ({ children }) => {
-    return (
-      <div className="my-2">
-        {children}
-      </div>
-    );
-  };
-  
-  export default Paragraph;
-  
+  return <div className="w-[98%] my-4">{children}</div>;
+};
+
+export default Paragraph;

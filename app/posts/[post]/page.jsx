@@ -28,11 +28,8 @@ const Post = ({ params }) => {
         <Mdx code={post.body.code} />
       </div>
       <div className="flex flex-col justify-between items-start text-xs">
-        <button onClick={() => handleBackToTop()} className="hover:text-accent">
-          Back to Top
-        </button>
         <Link href="/" className="hover:text-accent">
-          Back to Home
+          Ana Sayfaya Dön
         </Link>
       </div>
     </div>
