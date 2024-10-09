@@ -12,11 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="tr" className="grid grid-cols-6 text-base">
+    <html lang="tr" className="grid grid-cols-12 text-sm lg:text-base">
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
       />
-      <body className={`${roboto.className} col-start-2 col-end-5 my-10`}>
+      <body className={`${roboto.className} lg:col-start-4 lg:col-end-10 col-start-1 col-end-13 my-10 p-2`}>
         <AppTitle />
         {children}
       </body>

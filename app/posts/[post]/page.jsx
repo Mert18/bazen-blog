@@ -14,10 +14,6 @@ function getPostFromParams(slug) {
   return post;
 }
 
-const handleBackToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
 const Post = ({ params }) => {
   const post = getPostFromParams(params.post);
   return (
