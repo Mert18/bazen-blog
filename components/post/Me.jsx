@@ -9,8 +9,9 @@ const Me = ({ children }) => {
           className="mr-2 mb-2 lg:mb-0 rounded-sm"
           src="/frog.jpg"
           alt="frog"
-          width={70}
-          height={70}
+          width={60}
+          height={60}
+          style={{ objectFit: "contain", height: "60px", width: "60px" }}
         />
       <div className="flex-1 border border-accent1 bg-white2 h-max rounded-sm p-4">
         {children}

@@ -14,8 +14,9 @@ const Him = ({ children }) => {
           className="max-w-none"
           src="/ai.jpg"
           alt="ai representative woman"
-          width={70}
-          height={70}
+          width={60}
+          height={60}
+          style={{ objectFit: "contain", height: "60px", width: "60px" }}
         />
       </div>
     </div>
