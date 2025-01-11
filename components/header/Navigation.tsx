@@ -6,7 +6,7 @@ import useLanguage from "@/hooks/useLanguage";
 const Navigation = () => {
   const language = useLanguage();
   return (
-    <div className="custom-mr flex justify-center items-center bg-primarylighter text-text border border-text rounded-md font-bold">
+    <div className="custom-mr flex justify-center items-center text-text">
       <NavigationLink href={`/${language}`} text={language == "en" ? "Home" : "Ana Sayfa"} />
       <NavigationLink href={`/${language}/blog`} text="Blog" />
       <NavigationLink href={`/${language}/fotoraf`} text="Fotoraf" />

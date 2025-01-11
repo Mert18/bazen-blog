@@ -34,29 +34,27 @@ const PostCard = ({
   }, [category]);
 
   return (
-    <div className="bg-primary border border-secondary rounded-md m-2">
+    <div className="my-2">
       <Link
-        className="hover:underline w-full h-full flex justify-start items-center text-text"
+        className="hover:underline hover:bg-primarylighter transition-all w-full h-full flex justify-start items-center text-text"
         href={`/${language}/blog${slug}`}
       >
-        <div className="py-8 px-2">
-          <div className="flex w-full md:flex-row flex-col md:items-start items-center">
+          <div className="flex w-full md:flex-row flex-col md:items-center items-center">
             {image && (
               <Image
                 src={image}
                 alt="Lycians pixel art"
-                width={250}
-                height={250}
-                className="mr-4 border border-secondary md:mb-0 mb-4 rounded-md"
+                width={150}
+                height={150}
+                className="mr-4 md:mb-0 mb-4"
               />
             )}
-            <div className="flex flex-col justify-start w-full">
-              <h1 className="font-bold text-base md:text-xl lg:text-2xl mb-4">{title}</h1>
-              <p className="text-xs lg:text-sm my-2">{description}</p>
-              <p className="text-xs lg:text-sm my-2 text-accent">{date}</p>
+            <div className="flex flex-col justify-center md:items-start items-center w-full">
+              <h1 className="font-bold mb-4">{title}</h1>
+              <p className="text-2xs lg:text-sm my-2">{description}</p>
+              <p className="text-2xs lg:text-sm my-2 text-accent">{date}</p>
             </div>
           </div>
-        </div>
       </Link>
     </div>
   );

@@ -56,7 +56,7 @@ const HighlightedValk = () => {
   return (
     <div>
       {sortedPosts()
-        .slice(0, 3)
+        .slice(0, 1)
         .map((post) => {
           return (
             <ValkCard

@@ -11,16 +11,15 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-primary flex items-center justify-between p-2 text-sm border-b border-secondary`}
+      className={`flex items-center justify-between p-2 text-sm`}
     >
       <div className="flex justify-between items-center w-full relative">
-        <Title />
         {isSmallScreen ? (
           <HamburgerMenu />
         ) : (
           <>
             <Navigation />
-            <div className="flex justify-center  items-center">
+            <div className="flex justify-center items-center">
               <LanguageHandler />
               <div className="p-2"></div>
               <ThemeHandler />

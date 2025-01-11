@@ -52,7 +52,7 @@ const FotorafList = () => {
                     page === currentPage
                       ? "bg-secondary text-background"
                       : "bg-primary"
-                  } px-3 py-1 m-1 w-9 h-9 rounded-md border border-secondary hover:bg-secondary hover:text-primary`}
+                  } px-3 py-1 m-1 w-9 h-9  border border-secondary hover:bg-secondary hover:text-primary`}
                 >
                   {page}
                 </button>

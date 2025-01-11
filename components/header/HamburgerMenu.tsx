@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-start pt-8 z-40 bg-secondary text-">
           <button
             onClick={toggleMenu}
-            className="relative text-secondary bg-primary rounded-md p-2 rotate-45"
+            className="relative text-secondary bg-primary  p-2 rotate-45"
           >
             <div className="rounded-sm absolute top-0 left-1/2 w-1 h-full bg-secondary transform -translate-x-1/2"></div>
             <div className="rounded-sm absolute left-0 top-1/2 h-1 w-full bg-secondary transform -translate-y-1/2"></div>

@@ -10,7 +10,7 @@ const FotorafPagination = ({
     {currentPage !== 0 && (
         <button
         onClick={() => setCurrentPage(currentPage - 1)}
-        className="text-dark px-4 py-2 rounded-md"
+        className="text-dark px-4 py-2 "
         >
         Previous
         </button>
@@ -19,7 +19,7 @@ const FotorafPagination = ({
     {currentPage !== totalPages - 1 && (
         <button
         onClick={() => setCurrentPage(currentPage + 1)}
-        className="text-dark px-4 py-2 rounded-md"
+        className="text-dark px-4 py-2 "
         >
         Next
         </button>

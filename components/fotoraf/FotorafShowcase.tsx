@@ -42,7 +42,7 @@ const FotorafShowcase = () => {
             width={300}
             height={500}
             loading="lazy"
-            className="w-full h-full object-cover rounded-md border border-secondary select-none pointer-events-none"
+            className="w-full h-full object-cover  border border-secondary select-none pointer-events-none"
           />
         </div>
       ))}

@@ -55,7 +55,7 @@ const HighlightedPost = () => {
   return (
     <div>
       {sortedPosts()
-        .slice(0, 3)
+        .slice(0, 2)
         .map((post) => {
           return (
             <PostCard

@@ -31,10 +31,10 @@ const Fotoraf = ({ image }: any) => {
         width={500}
         height={300}
         loading="lazy"
-        className="rounded-md border border-secondary select-none pointer-events-none"
+        className=" border border-secondary select-none pointer-events-none"
       />
       {hover && (
-        <div className="absolute inset-0 bg-secondary bg-opacity-25 flex flex-col items-center justify-center rounded-md">
+        <div className="absolute inset-0 bg-secondary bg-opacity-25 flex flex-col items-center justify-center ">
           <p className="text-primary text-lg">{image.date}</p>
           {image.desc && <p className="text-sm text-primary">{image.desc}</p>}
           {image.place && <p className="text-sm text-primary">{image.place}</p>}

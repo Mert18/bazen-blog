@@ -6,7 +6,7 @@ import React from "react";
 const Title = () => {
   const language = useLanguage();
   return (
-    <div className="flex flex-col justify-center items-center bg-primarylighter text-text border border-text rounded-md font-bold">
+    <div className="flex flex-col justify-center items-center bg-primarylighter text-text  font-bold">
       <Link href={`/${language}`} className="p-2">
         <p>bazen.blog</p>
       </Link>

@@ -6,7 +6,7 @@ import React from "react";
 const PostHeader = ({ post }: any) => {
   const language = useLanguage();
   return (
-    <div className="p-4 border border-secondary bg-primary-lighter my-2 rounded-md">
+    <div className="p-4 border border-secondary bg-primary-lighter my-2 ">
       <div className="flex flex-col justify-center items-start text-sm py-4">
         <h1 className="font-bold text-xl">{post.title}</h1>
         <p className="py-4">{post.description}</p>
@@ -25,13 +25,13 @@ const PostHeader = ({ post }: any) => {
         )}
       </div>
       {post.image && (
-        <div className="flex justify-center items-center border-2 rounded-md border-secondary">
+        <div className="flex justify-center items-center border-2  border-secondary">
           <Image
             src={post.image}
             width={800}
             height={400}
             alt={post.title}
-            className="w-full h-64 object-cover pointer-events-none rounded-md"
+            className="w-full h-64 object-cover pointer-events-none "
           />
         </div>
       )}
