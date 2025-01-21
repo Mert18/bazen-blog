@@ -1,0 +1,9 @@
+html[data-theme="cherry"] {
+    --color-primary: #fdf2f4;
+    --color-primary-lighter: #fef6f8;
+    --color-secondary: #e4a7b5;
+    --color-accent: #9e4d5c;
+    --color-text: #6d3844;
+    --color-text-secondary: #b98e97;
+    --color-background: #fff8f9;
+}

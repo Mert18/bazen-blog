@@ -5,7 +5,7 @@ import React from "react";
 
 const MoreValks = () => {
   return (
-    <Link className="hover:underline text-xs" href={`/${getLanguageText("tr", "en")}/valks`}>
+    <Link className="hover:underline text-text text-xs" href={`/${getLanguageText("tr", "en")}/valks`}>
       More Valks...
     </Link>
   );

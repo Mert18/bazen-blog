@@ -1,0 +1,9 @@
+html[data-theme="obsidian"] {
+    --color-primary: #1a1a1d;
+    --color-primary-lighter: #27272c;
+    --color-secondary: #8b60ed;
+    --color-accent: #ff7edb;
+    --color-text: #e4e4e4;
+    --color-text-secondary: #666666;
+    --color-background: #121214;
+}

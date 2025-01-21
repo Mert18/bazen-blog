@@ -1,0 +1,9 @@
+html[data-theme="midnight"] {
+    --color-primary: #1a1b26;
+    --color-primary-lighter: #24273a;
+    --color-secondary: #7aa2f7;
+    --color-accent: #bb9af7;
+    --color-text: #c0caf5;
+    --color-text-secondary: #565f89;
+    --color-background: #13141f;
+}

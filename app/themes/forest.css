@@ -1,0 +1,9 @@
+html[data-theme="forest"] {
+    --color-primary: #1b2121;
+    --color-primary-lighter: #243028;
+    --color-secondary: #7fb685;
+    --color-accent: #a5c3a7;
+    --color-text: #d8e6d9;
+    --color-text-secondary: #526b54;
+    --color-background: #141918;
+}

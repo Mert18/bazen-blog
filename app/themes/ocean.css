@@ -1,0 +1,9 @@
+html[data-theme="ocean"] {
+    --color-primary: #e6f3f7;
+    --color-primary-lighter: #f0f7f9;
+    --color-secondary: #3494b3;
+    --color-accent: #1d3244;
+    --color-text: #2b5469;
+    --color-text-secondary: #7099ab;
+    --color-background: #f7fafc;
+}

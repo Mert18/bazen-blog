@@ -1,0 +1,9 @@
+html[data-theme="desert"] {
+    --color-primary: #fff5eb;
+    --color-primary-lighter: #fff9f5;
+    --color-secondary: #e67e4a;
+    --color-accent: #4a3c32;
+    --color-text: #5d4434;
+    --color-text-secondary: #b38970;
+    --color-background: #fdfaf5;
+}

@@ -13,7 +13,15 @@
     --color-background: #FBFBF0;
   }
   @import "themes/nature.css";
-
+  @import "themes/ocean.css";
+  @import "themes/desert.css";
+  @import "themes/midnight.css";
+  @import "themes/forest.css";
+  @import "themes/obsidian.css";
+  @import "themes/ember.css";
+  @import "themes/cherry.css";
+  @import "themes/lavender.css";
+  @import "themes/chocolate.css";
 }
 
 body {
@@ -46,5 +54,5 @@ html {
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: var(--color-secondary);
 }

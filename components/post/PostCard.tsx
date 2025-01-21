@@ -58,15 +58,17 @@ const PostCard = ({
         href={`/${language}/blog${slug}`}
       >
         <div className="flex w-full md:flex-row flex-col md:items-start items-center h-full">
-          {image && (
-            <Image
-              src={image}
-              alt="Lycians pixel art"
-              width={300}
-              height={300}
-              className="mr-4 md:mb-0 mb-4 p-1 border border-secondary"
-            />
-          )}
+          <div className="bg-white opacity-50 mr-4 md:mb-0 mb-4">
+            {image && (
+              <Image
+                src={image}
+                alt="Lycians pixel art"
+                width={300}
+                height={300}
+                className="p-1 border border-secondary"
+              />
+            )}
+          </div>
           <div className="md:items-start items-center w-full h-full">
             <div className="mb-4">
               <h1 className="font-bold text-2xl">{title}</h1>

@@ -1,0 +1,9 @@
+html[data-theme="ember"] {
+    --color-primary: #1f1d1d;
+    --color-primary-lighter: #2c2726;
+    --color-secondary: #ff6b4a;
+    --color-accent: #ffa07a;
+    --color-text: #f5e6e6;
+    --color-text-secondary: #796666;
+    --color-background: #171515;
+}

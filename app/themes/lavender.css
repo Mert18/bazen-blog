@@ -1,0 +1,9 @@
+html[data-theme="lavender"] {
+    --color-primary: #f6f3ff;
+    --color-primary-lighter: #faf8ff;
+    --color-secondary: #9d8cd6;
+    --color-accent: #584b8c;
+    --color-text: #3d3564;
+    --color-text-secondary: #8f84b3;
+    --color-background: #fbfaff;
+}

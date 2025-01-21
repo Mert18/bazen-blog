@@ -1,0 +1,9 @@
+html[data-theme="chocolate"] {
+    --color-primary: #211d1b;
+    --color-primary-lighter: #2d2825;
+    --color-secondary: #c17f59;
+    --color-accent: #e6a87d;
+    --color-text: #f0e4db;
+    --color-text-secondary: #8b7368;
+    --color-background: #191614;
+}
