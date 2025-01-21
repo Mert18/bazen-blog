@@ -5,7 +5,7 @@ import React from "react";
 
 const MoreFotorafs = () => {
   return (
-    <Link className="hover:underline text-xs" href={`/${getLanguageText("tr", "en")}/fotoraf`}>
+    <Link className="hover:underline text-text text-xs" href={`/${getLanguageText("tr", "en")}/fotoraf`}>
       More Fotorafs...
     </Link>
   );

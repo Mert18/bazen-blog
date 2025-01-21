@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center h-20 bg-secondary">
-      <Link href="https://github.com/Mert18/bazen-blog" target="_blank" className="text-primary">Github</Link>
+    <div className="flex justify-center items-center h-20 bg-primary text-secondary border-t border-secondary">
+      <Link href="https://github.com/Mert18/bazen-blog" target="_blank">Github</Link>
     </div>
   );
 };
