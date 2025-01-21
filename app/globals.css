@@ -12,9 +12,7 @@
     --color-text-secondary: #7FAE97;
     --color-background: #FBFBF0;
   }
-  @import "themes/newspaper.css";
   @import "themes/nature.css";
-  @import "themes/urban.css";
 
 }
 

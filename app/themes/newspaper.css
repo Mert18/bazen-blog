@@ -1,9 +1,0 @@
-html[data-theme="newspaper"] {
-    --color-primary: #FFFFFF;          /* Pure white for main elements */
-    --color-primary-lighter: #F9F9F9;  /* Slightly off-white for subtle distinction */
-    --color-secondary: #E8E8E8;        /* Light gray for supporting elements */
-    --color-accent: #D12329;           /* Classic newspaper red, slightly muted */
-    --color-text: #2F2F2F;             /* Dark gray for comfortable reading */
-    --color-text-secondary: #FFFFFF;    /* Pure white for contrast */
-    --color-background: #FAFAFA;        /* Barely off-white background */
-  }

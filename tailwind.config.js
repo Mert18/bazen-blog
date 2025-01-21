@@ -29,10 +29,7 @@ module.exports = {
       text: "var(--color-text)",
       textsecondary: "var(--color-text-secondary)",
       background: "var(--color-background)",
-    },
-    fontSize: {
-      '2xs': ".8rem"
-    }
+    }   
   },
   plugins: [],
   variants: {

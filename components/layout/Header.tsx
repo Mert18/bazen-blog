@@ -1,32 +1,22 @@
 import React from "react";
 import Navigation from "../header/Navigation";
-import Title from "../header/Title";
-import ThemeHandler from "../header/ThemeHandler";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import HamburgerMenu from "../header/HamburgerMenu";
-import LanguageHandler from "../header/LanguageHandler";
+import Accessibility from "../header/Accessibility";
 
 const Header = () => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div
-      className={`flex items-center justify-between p-2 text-sm`}
-    >
-      <div className="flex justify-between items-center w-full relative">
+    <div className={`flex items-center justify-center p-2 text-sm bg-primary border-b-2 border-secondary`}>
         {isSmallScreen ? (
           <HamburgerMenu />
         ) : (
           <>
             <Navigation />
-            <div className="flex justify-center items-center">
-              <LanguageHandler />
-              <div className="p-2"></div>
-              <ThemeHandler />
-            </div>
+            <Accessibility />
           </>
         )}
-      </div>
     </div>
   );
 };

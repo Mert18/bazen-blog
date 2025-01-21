@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative p-4">
       <div
         className="z-50 flex flex-col justify-between w-8 h-6 cursor-pointer"
         onClick={toggleMenu}
@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-start pt-8 z-40 bg-secondary text-">
           <button
             onClick={toggleMenu}
-            className="relative text-secondary bg-primary  p-2 rotate-45"
+            className="relative text-secondary bg-primary p-4 my-4 rotate-45"
           >
             <div className="rounded-sm absolute top-0 left-1/2 w-1 h-full bg-secondary transform -translate-x-1/2"></div>
             <div className="rounded-sm absolute left-0 top-1/2 h-1 w-full bg-secondary transform -translate-y-1/2"></div>
@@ -34,11 +34,19 @@ const HamburgerMenu = () => {
 
           <div className="w-96">
             {language === "en" ? (
-              <MobileNavigationLink href="/en" text="Ana Sayfa" onClick={toggleMenu} />
-            ): (
-              <MobileNavigationLink href="/tr" text="Home" onClick={toggleMenu} />
+              <MobileNavigationLink
+                href="/en"
+                text="Ana Sayfa"
+                onClick={toggleMenu}
+              />
+            ) : (
+              <MobileNavigationLink
+                href="/tr"
+                text="Home"
+                onClick={toggleMenu}
+              />
             )}
-            
+
             <MobileNavigationLink
               href={`/${language}/blog`}
               text="Blog"
@@ -55,8 +63,9 @@ const HamburgerMenu = () => {
               onClick={toggleMenu}
             />
           </div>
+          <div className="my-4"></div>
           <LanguageHandler />
-          <br />
+          <div className="my-4"></div>
           <ThemeHandler />
         </div>
       )}

@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "../themeContext";
+import WebsiteMark from "@/components/WebsiteMark";
 
 const kanit = Kanit({
   weight: "400",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: IRootLayout) {
       />
       <body className={kanit.className}>
         <ThemeProvider>
+          <WebsiteMark />
           <Header />
           <div className="min-h-screen my-4">{children}</div>
           <Footer />
