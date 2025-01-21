@@ -1,13 +1,12 @@
 'use client'
-import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 import Link from "next/link";
 import React from "react";
 
 const Title = () => {
-  const language = useLanguage();
   return (
     <div className="flex flex-col justify-center items-center bg-primarylighter text-text  font-bold">
-      <Link href={`/${language}`} className="p-2">
+      <Link href={getLanguageText("/tr", "/en")} className="p-2">
         <p>bazen.blog</p>
       </Link>
     </div>

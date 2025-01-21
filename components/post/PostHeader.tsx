@@ -1,10 +1,9 @@
 "use client";
-import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 import Image from "next/image";
 import React from "react";
 
 const PostHeader = ({ post }: any) => {
-  const language = useLanguage();
   return (
     <div className="p-4 border border-secondary bg-primary-lighter my-2 ">
       <div className="flex flex-col justify-center items-start py-4">
@@ -14,7 +13,7 @@ const PostHeader = ({ post }: any) => {
         {post.category === "valk" && (
           <>
             <p className="lg:text-sm my-2">
-              {post.steps} {language === "en" ? "Steps" : "Adım"}
+              {post.steps} {getLanguageText("Adım", "Steps")}
             </p>
             <p className="lg:text-sm my-2">{post.distance}</p>
             <p className="lg:text-sm my-2">{post.duration}</p>

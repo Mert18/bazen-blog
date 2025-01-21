@@ -11,7 +11,15 @@ const HighlightedPost = () => {
 
     return allPosts.filter(
       (post) => post.language === language && post.category !== "valk"
-    );
+    ).sort((a, b) => {
+      const [dayA, monthA, yearA] = a.date.split("/").map(Number);
+      const [dayB, monthB, yearB] = b.date.split("/").map(Number);
+
+      const dateA = new Date(yearA, monthA - 1, dayA).getTime();
+      const dateB = new Date(yearB, monthB - 1, dayB).getTime();
+
+      return dateB - dateA;
+    });
   };
 
   return (

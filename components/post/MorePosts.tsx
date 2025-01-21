@@ -1,12 +1,10 @@
 "use client";
-import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 import Link from "next/link";
 import React from "react";
 
 const MorePosts = () => {
-  const language = useLanguage();
-
-  return <Link className="hover:underline text-xs" href={`/${language}/blog`}>More Posts...</Link>;
+  return <Link className="hover:underline text-xs" href={`/${getLanguageText("tr", "en")}/blog`}>More Posts...</Link>;
 };
 
 export default MorePosts;

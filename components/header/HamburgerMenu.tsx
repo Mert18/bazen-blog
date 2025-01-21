@@ -1,11 +1,10 @@
 import { useState } from "react";
 import MobileNavigationLink from "./MobileNavigationLink";
 import ThemeHandler from "./ThemeHandler";
-import useLanguage from "@/hooks/useLanguage";
 import LanguageHandler from "./LanguageHandler";
+import { getLanguageText } from "@/util/functions.";
 
 const HamburgerMenu = () => {
-  const language = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -33,32 +32,24 @@ const HamburgerMenu = () => {
           </button>
 
           <div className="w-96">
-            {language === "en" ? (
-              <MobileNavigationLink
-                href="/en"
-                text="Ana Sayfa"
-                onClick={toggleMenu}
-              />
-            ) : (
-              <MobileNavigationLink
-                href="/tr"
-                text="Home"
-                onClick={toggleMenu}
-              />
-            )}
+            <MobileNavigationLink
+              href={getLanguageText("/tr", "/en")}
+              text={getLanguageText("Ana Sayfa", "Home")}
+              onClick={toggleMenu}
+            />
 
             <MobileNavigationLink
-              href={`/${language}/blog`}
+              href={`/${getLanguageText("tr", "en")}/blog`}
               text="Blog"
               onClick={toggleMenu}
             />
             <MobileNavigationLink
-              href={`/${language}/fotoraf`}
+              href={`/${getLanguageText("tr", "en")}/fotoraf`}
               text="Fotoraf"
               onClick={toggleMenu}
             />
             <MobileNavigationLink
-              href={`/${language}/valks`}
+              href={`/${getLanguageText("tr", "en")}/valks`}
               text="Valks"
               onClick={toggleMenu}
             />

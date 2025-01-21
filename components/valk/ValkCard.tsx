@@ -1,5 +1,6 @@
 "use client";
 import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 import { formatDistanceToNowStrict } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -92,7 +93,7 @@ const ValkCard = ({
               </h1>
               <p>{truncateText(description)}</p>
               <p className="text-xs lg:text-sm my-2">
-                {steps} {language === "en" ? "Steps" : "Adım"}
+                {steps} {getLanguageText("Adım", "Steps")}
               </p>
               <p className="text-xs lg:text-sm my-2">{distance}</p>
               <p className="text-xs lg:text-sm my-2">{duration}</p>
