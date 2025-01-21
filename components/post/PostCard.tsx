@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useLanguage from "@/hooks/useLanguage";
 import { formatDistanceToNow, formatDistanceToNowStrict } from "date-fns";
+import { getLanguageText } from "@/util/functions.";
 
 interface IPostCard {
   title: string;
@@ -82,7 +83,7 @@ const PostCard = ({
             </div>
             <p>{truncateText(description)}</p>
             <div className="flex flex-row-reverse lg:text-sm">
-              <p>{language === "tr" ? "Devamını okuyun" : "Read More"}</p>
+              <p>{getLanguageText("Devamını okuyun", "Read More")}</p>
             </div>
           </div>
         </div>

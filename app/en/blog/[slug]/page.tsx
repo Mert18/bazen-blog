@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Mdx } from "@/mdx-components";
 import Link from "next/link";
 import PostHeader from "@/components/post/PostHeader";
-import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 
 interface PageProps {
   params: {
@@ -25,7 +25,6 @@ const handleBackToTop = () => {
 };
 
 const Post = ({ params }: PageProps) => {
-  const language = useLanguage();
   const post = getPostFromParams(params.slug);
   return (
     <div className="flex flex-col justify-center items-center md:p-4 p-0 text-text">
@@ -38,7 +37,7 @@ const Post = ({ params }: PageProps) => {
         <div className="flex justify-between items-center">
           <button onClick={() => handleBackToTop()}>Back to Top</button>
           <div className="py-4">
-            <Link href={`/${language}`}>Back to Home</Link>
+            <Link href={getLanguageText("/tr", "/en")}>Back to Home</Link>
           </div>
         </div>
       </div>

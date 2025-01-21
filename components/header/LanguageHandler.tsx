@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { getLanguageText } from "@/util/functions.";
 
 const LanguageHandler = () => {
   const pathname = usePathname();
@@ -24,7 +25,7 @@ const LanguageHandler = () => {
           height={40}
           alt="language change"
         />
-        <p>{language === "tr" ? "English" : "Türkçe"}</p>
+        <p>{getLanguageText("English", "Türkçe")}</p>
       </Link>
     </div>
   );

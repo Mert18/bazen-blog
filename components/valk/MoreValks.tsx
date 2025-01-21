@@ -1,13 +1,11 @@
 "use client";
-import useLanguage from "@/hooks/useLanguage";
+import { getLanguageText } from "@/util/functions.";
 import Link from "next/link";
 import React from "react";
 
 const MoreValks = () => {
-  const language = useLanguage();
-
   return (
-    <Link className="hover:underline text-xs" href={`/${language}/valks`}>
+    <Link className="hover:underline text-xs" href={`/${getLanguageText("tr", "en")}/valks`}>
       More Valks...
     </Link>
   );
