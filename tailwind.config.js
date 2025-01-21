@@ -9,9 +9,20 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "nature-split": "linear-gradient(90deg, #53c58c 50%, #eff9ef 50%)",
+        "ocean-split": "linear-gradient(90deg, #3494b3 50%, #e6f3f7 50%)",
+        "desert-split": "linear-gradient(90deg, #e67e4a 50%, #fff5eb 50%)",
+        "cherry-split": "linear-gradient(90deg, #e4a7b5 50%, #fdf2f4 50%)",
+        "lavender-split": "linear-gradient(90deg, #9d8cd6 50%, #f6f3ff 50%)",
+        "midnight-split": "linear-gradient(90deg, #7aa2f7 50%, #1a1b26 50%)",
+        "forest-split": "linear-gradient(90deg, #7fb685 50%, #1b2121 50%)",
+        "obsidian-split": "linear-gradient(90deg, #8b60ed 50%, #1a1a1d 50%)",
+        "ember-split": "linear-gradient(90deg, #ff6b4a 50%, #1f1d1d 50%)",
+        "chocolate-split": "linear-gradient(90deg, #c17f59 50%, #211d1b 50%)",
+      },
+      textShadow: {
+        outline:
+          "2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
       },
     },
     colors: {
@@ -29,13 +40,24 @@ module.exports = {
       text: "var(--color-text)",
       textsecondary: "var(--color-text-secondary)",
       background: "var(--color-background)",
-    }   
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities, theme }) {
+      const textShadowUtilities = Object.entries(theme("textShadow", {})).map(
+        ([key, value]) => ({
+          [`.text-shadow-${key}`]: {
+            "text-shadow": value,
+          },
+        })
+      );
+      addUtilities(textShadowUtilities);
+    },
+  ],
   variants: {
     extend: {
       display: ["group-hover"],
-      backgroundOpacity: ['active']
+      backgroundOpacity: ["active"],
     },
   },
 };

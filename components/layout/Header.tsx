@@ -8,7 +8,7 @@ const Header = () => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div className={`flex items-center justify-center p-2 text-sm bg-primary border-b-2 border-secondary`}>
+    <div className={`flex flex-col items-center justify-center p-2 text-sm bg-primary border-b-2 border-secondary`}>
         {isSmallScreen ? (
           <HamburgerMenu />
         ) : (
