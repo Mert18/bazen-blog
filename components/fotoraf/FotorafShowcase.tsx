@@ -1,12 +1,7 @@
 "use client";
+import { ImageData } from "@/util/types";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-
-interface ImageData {
-  desc: string;
-  date: string;
-  url: string;
-}
 
 const FotorafShowcase = () => {
   const [images, setImages] = useState<ImageData[]>([]);
@@ -30,7 +25,7 @@ const FotorafShowcase = () => {
   }, []);
 
   return (
-    <div className="flex overflow-x-scroll whitespace-nowrap custom-mr py-2 bg-primary border border-secondary my-2">
+    <div className="flex overflow-x-scroll whitespace-nowrap custom-mr py-2 bg-primary my-2">
       {images.map((image) => (
         <div
           key={image.url}

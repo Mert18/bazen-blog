@@ -1,11 +1,8 @@
 import React from "react";
 import Image from "../Image";
+import { IRootLayout } from "@/util/types";
 
-interface IPrompt {
-  children: React.ReactNode;
-}
-
-const Prompt = ({ children }: IPrompt) => {
+const Prompt = ({ children }: IRootLayout) => {
   return (
     <div className="grid grid-cols-8 w-full mt-2 mb-6">
       <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-end-2 flex items-start justify-start">

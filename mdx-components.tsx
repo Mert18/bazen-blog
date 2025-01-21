@@ -10,10 +10,7 @@ import List from "./components/post/text/List";
 import BlogImage from "./components/post/text/BlogImage";
 import ListItemWithTitle from "./components/post/text/ListItemWithTitle";
 import Quote from "./components/post/text/Quote";
-
-interface MdxProps {
-  code: string;
-}
+import { MdxProps } from "./util/types";
 
 export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);

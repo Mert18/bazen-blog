@@ -1,8 +1,5 @@
+import { IList } from "@/util/types";
 import React from "react";
-
-interface IList {
-  points: string[];
-}
 
 const List = ({ points }: IList) => {
   return (

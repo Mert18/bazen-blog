@@ -7,15 +7,13 @@ import { useEffect } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "../themeContext";
 import WebsiteMark from "@/components/WebsiteMark";
+import MainContent from "@/components/layout/MainContent";
+import { IRootLayout } from "@/util/types";
 
 const kanit = Kanit({
   weight: "400",
   subsets: ["latin"],
 });
-
-interface IRootLayout {
-  children: React.ReactNode;
-}
 
 export default function RootLayout({ children }: IRootLayout) {
   useEffect(() => {
@@ -23,6 +21,7 @@ export default function RootLayout({ children }: IRootLayout) {
       ...window.process,
     };
   }, []);
+
   return (
     <html lang="en">
       <GoogleAnalytics
@@ -32,9 +31,7 @@ export default function RootLayout({ children }: IRootLayout) {
         <ThemeProvider>
           <WebsiteMark />
           <Header />
-          <div className="flex justify-center">
-            <div className="min-h-screen my-4 lg:w-1/2 w-full">{children}</div>
-          </div>
+          <MainContent children={children} />
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,23 +1,11 @@
 "use client";
 import useLanguage from "@/hooks/useLanguage";
 import { getLanguageText } from "@/util/functions.";
+import { IValkCard } from "@/util/types";
 import { formatDistanceToNowStrict } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
-
-interface IValkCard {
-  title: string;
-  description: string;
-  date: string;
-  link: string;
-  category: string;
-  image: string | null;
-  valk: string;
-  steps: string;
-  distance: string;
-  duration: string;
-}
 
 const ValkCard = ({
   title,
@@ -70,7 +58,7 @@ const ValkCard = ({
   return (
     <div className="my-2 bg-primary">
       <Link
-        className="hover:underline transition-all w-full h-full flex justify-start items-center text-text p-4 border border-secondary"
+        className="hover:underline transition-all w-full h-full flex justify-start items-center text-text p-4"
         href={`/${language}${valk}`}
       >
         <div>
@@ -79,8 +67,8 @@ const ValkCard = ({
               <Image
                 src={image}
                 alt="Lycians pixel art"
-                width={250}
-                height={250}
+                width={300}
+                height={300}
                 className="mr-4 md:mb-0 mb-4"
               />
             )}
@@ -91,7 +79,7 @@ const ValkCard = ({
                   {timeAgo(date)}
                 </p>
               </h1>
-              <p>{truncateText(description)}</p>
+              <p className="text-sm">{truncateText(description)}</p>
               <p className="text-xs lg:text-sm my-2">
                 {steps} {getLanguageText("Adım", "Steps")}
               </p>

@@ -1,9 +1,5 @@
+import { IListItemWithTitle } from '@/util/types'
 import React from 'react'
-
-interface IListItemWithTitle {
-  title: string
-  text: string
-}
 
 const ListItemWithTitle = ({title, text}: IListItemWithTitle) => {
   return (

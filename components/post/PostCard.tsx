@@ -3,18 +3,9 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import useLanguage from "@/hooks/useLanguage";
-import { formatDistanceToNow, formatDistanceToNowStrict } from "date-fns";
+import { formatDistanceToNowStrict } from "date-fns";
 import { getLanguageText } from "@/util/functions.";
-
-interface IPostCard {
-  title: string;
-  description: string;
-  date: string;
-  link: string;
-  category: string;
-  image: string | null;
-  slug: string;
-}
+import { IPostCard } from "@/util/types";
 
 const PostCard = ({
   title,
@@ -63,7 +54,7 @@ const PostCard = ({
   return (
     <div className="my-2 bg-primary">
       <Link
-        className="hover:underline transition-all w-full h-full flex justify-start items-center text-text p-4 border border-secondary"
+        className="hover:underline transition-all w-full h-full flex justify-start items-center text-text p-4"
         href={`/${language}/blog${slug}`}
       >
         <div className="flex w-full md:flex-row flex-col md:items-start items-center h-full">
@@ -71,8 +62,8 @@ const PostCard = ({
             <Image
               src={image}
               alt="Lycians pixel art"
-              width={250}
-              height={250}
+              width={300}
+              height={300}
               className="mr-4 md:mb-0 mb-4 p-1 border border-secondary"
             />
           )}
@@ -81,7 +72,7 @@ const PostCard = ({
               <h1 className="font-bold text-2xl">{title}</h1>
               <p className="text-xs lg:text-sm text-accent">{timeAgo(date)}</p>
             </div>
-            <p>{truncateText(description)}</p>
+            <p className="text-sm">{truncateText(description)}</p>
             <div className="flex flex-row-reverse lg:text-sm">
               <p>{getLanguageText("Devamını okuyun", "Read More")}</p>
             </div>

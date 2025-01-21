@@ -1,17 +1,18 @@
-import { usePathname } from 'next/navigation'
+"use client";
+import { usePathname } from "next/navigation";
 
 const useLanguage = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
-  if (pathname.includes('/tr')) {
-    return 'tr';
+  if (pathname.includes("/tr")) {
+    return "tr";
   }
 
-  if (pathname.includes('/en')) {
-    return 'en';
+  if (pathname.includes("/en")) {
+    return "en";
   }
 
-  return 'tr';
+  return "tr";
 };
 
 export default useLanguage;

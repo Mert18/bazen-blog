@@ -1,10 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import Image from "next/image";
-
-interface IBlogImage {
-  source: string;
-  description: string;
-}
+import { IBlogImage } from "@/util/types";
 
 const BlogImage = ({ source, description }: IBlogImage) => {
   const [fullscreen, setFullscreen] = React.useState(false);

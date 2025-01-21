@@ -1,9 +1,6 @@
 "use client";
+import { IGoogleAnalytics } from "@/util/types";
 import Script from "next/script";
-
-interface IGoogleAnalytics {
-  GA_TRACKING_ID: string;
-}
 
 const GoogleAnalytics = ({ GA_TRACKING_ID }: IGoogleAnalytics) => {
   return (

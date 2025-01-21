@@ -1,10 +1,7 @@
+import { IRootLayout } from "@/util/types";
 import React from "react";
 
-interface IHeaderTwo {
-  children: React.ReactNode;
-}
-
-const HeaderTwo = ({ children }: IHeaderTwo) => {
+const HeaderTwo = ({ children }: IRootLayout) => {
   return <div className="w-full my-2 text-lg font-bold">{children}</div>;
 };
 

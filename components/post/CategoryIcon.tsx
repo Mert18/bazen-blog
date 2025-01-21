@@ -1,9 +1,6 @@
 "use client";
+import { ICategoryIcon } from "@/util/types";
 import React from "react";
-
-interface ICategoryIcon {
-  category: string;
-}
 
 const CategoryIcon = ({ category}: ICategoryIcon) => {
   return (

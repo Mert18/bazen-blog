@@ -10,20 +10,21 @@ const LanguageHandler = () => {
   const pathname = usePathname();
   const language = useLanguage();
   return (
-    <div className="flex flex-col justify-center items-center text-text font-bold mx-4">
+    <div className="flex text-text font-bold mx-2 bg-primarylighter border-2 border-secondary p-1 rounded-md">
       <Link
         href={
           language === "tr"
             ? pathname.replace("/tr", "/en")
             : pathname.replace("/en", "/tr")
         }
-        className="flex flex-col justify-center items-center"
+        className="flex justify-center items-center"
       >
         <Image
           src={"/icon/language.svg"}
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt="language change"
+          className="mr-1"
         />
         <p>{getLanguageText("English", "Türkçe")}</p>
       </Link>
