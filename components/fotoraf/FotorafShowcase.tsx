@@ -12,9 +12,15 @@ const FotorafShowcase = () => {
       const res = await fetch(`/api/images`);
       if (res.ok) {
         const data: ImageData[] = await res.json();
-        const sortedData = data.sort(
-          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        );
+        const sortedData = data.sort((a, b) => {
+          const [dayA, monthA, yearA] = a.date.split("/").map(Number);
+          const [dayB, monthB, yearB] = b.date.split("/").map(Number);
+  
+          const dateA = new Date(yearA, monthA - 1, dayA).getTime();
+          const dateB = new Date(yearB, monthB - 1, dayB).getTime();
+  
+          return dateB - dateA;
+        });
         setImages(sortedData.slice((page - 1) * limit, page * limit));
       } else {
         console.error("Failed to fetch images");
