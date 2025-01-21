@@ -24,7 +24,7 @@ const LanguageHandler = () => {
           height={40}
           alt="language change"
         />
-        <p>{language === "tr" ? "Turkish" : "English"}</p>
+        <p>{language === "tr" ? "English" : "Türkçe"}</p>
       </Link>
     </div>
   );

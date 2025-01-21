@@ -32,10 +32,10 @@ const Valk = ({ params }: PageProps) => {
   const post = getPostFromParams(params.valk);
   return (
     <div className="flex flex-col justify-center items-center md:p-4 p-0 text-text">
-      <div className="w-full sm:w-4/5 xl:w-1/2">
+      <div className="w-full">
         <PostHeader post={post} />
 
-        <div className="flex flex-col justify-center items-start md:py-4 text-xs xl:text-sm overflow-auto bg-primary p-4 border border-secondary ">
+        <div className="flex flex-col justify-center items-start md:py-4 xl:text-sm overflow-auto bg-primary p-4 border border-secondary ">
           <Mdx code={post.body.code} />
         </div>
         <div className="flex justify-between items-center">

@@ -3,14 +3,14 @@ import useLanguage from "@/hooks/useLanguage";
 import Link from "next/link";
 import React from "react";
 
-const MoreValks = () => {
+const MoreFotorafs = () => {
   const language = useLanguage();
 
   return (
-    <Link className="hover:underline text-xs" href={`/${language}/valks`}>
-      More Valks...
+    <Link className="hover:underline text-xs" href={`/${language}/fotoraf`}>
+      More Fotorafs...
     </Link>
   );
 };
 
-export default MoreValks;
+export default MoreFotorafs;

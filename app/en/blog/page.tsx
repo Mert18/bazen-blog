@@ -1,5 +1,4 @@
 import React from "react";
-import { parseDate } from "@/util/functions.";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "@/components/post/PostCard";
 
@@ -11,11 +10,17 @@ export const metadata = {
 const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
-    return allPosts.filter((post) => post.language === "en" && post.category !== "valk").sort((a, b) => {
-      const dateA = parseDate(a.date);
-      const dateB = parseDate(b.date);
-      return dateB.diff(dateA);
-    });
+    return allPosts
+      .filter((post) => post.language === "en" && post.category !== "valk")
+      .sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split("/").map(Number);
+        const [dayB, monthB, yearB] = b.date.split("/").map(Number);
+
+        const dateA = new Date(yearA, monthA - 1, dayA).getTime();
+        const dateB = new Date(yearB, monthB - 1, dayB).getTime();
+
+        return dateB - dateA;
+      });
   };
 
   return (
@@ -35,7 +40,7 @@ const Blog = () => {
         );
       })}
     </div>
-  )
+  );
 };
 
 export default Blog;

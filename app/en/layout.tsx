@@ -32,7 +32,9 @@ export default function RootLayout({ children }: IRootLayout) {
         <ThemeProvider>
           <WebsiteMark />
           <Header />
-          <div className="min-h-screen my-4">{children}</div>
+          <div className="flex justify-center">
+            <div className="min-h-screen my-4 lg:w-1/2 w-full">{children}</div>
+          </div>
           <Footer />
         </ThemeProvider>
       </body>

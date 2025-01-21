@@ -1,6 +1,5 @@
 import React from 'react'
 import { Post, allPosts } from "@/.contentlayer/generated";
-import { parseDate } from "@/util/functions.";
 import ValkCard from '@/components/valk/ValkCard';
 
 export const metadata = {
@@ -16,9 +15,13 @@ const Valks = () => {
         return post.language === "tr" && post.category === "valk";
       })
       .sort((a, b) => {
-        const dateA = parseDate(a.date);
-        const dateB = parseDate(b.date);
-        return dateB.diff(dateA);
+        const [dayA, monthA, yearA] = a.date.split("/").map(Number);
+        const [dayB, monthB, yearB] = b.date.split("/").map(Number);
+
+        const dateA = new Date(yearA, monthA - 1, dayA).getTime();
+        const dateB = new Date(yearB, monthB - 1, dayB).getTime();
+
+        return dateB - dateA;
       });
   };
   

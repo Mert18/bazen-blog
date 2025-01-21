@@ -34,6 +34,7 @@ const FotorafList = () => {
 
   return (
     <div>
+      <div className="flex justify-center items-center text-text p-4">FOTORAF</div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 m-1">
         {images.map((image: any) => (
           <Fotoraf key={image.url} image={image} />
@@ -52,7 +53,7 @@ const FotorafList = () => {
                     page === currentPage
                       ? "bg-secondary text-background"
                       : "bg-primary"
-                  } px-3 py-1 m-1 w-9 h-9  border border-secondary hover:bg-secondary hover:text-primary`}
+                  } px-3 py-1 m-1 w-9 h-9  border border-secondary hover:bg-secondary hover:text-primary rounded-md`}
                 >
                   {page}
                 </button>

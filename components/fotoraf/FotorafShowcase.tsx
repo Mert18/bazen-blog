@@ -30,7 +30,7 @@ const FotorafShowcase = () => {
   }, []);
 
   return (
-    <div className="flex overflow-x-scroll whitespace-nowrap custom-mr m-2">
+    <div className="flex overflow-x-scroll whitespace-nowrap custom-mr py-2 bg-primary border border-secondary my-2">
       {images.map((image) => (
         <div
           key={image.url}
@@ -42,7 +42,7 @@ const FotorafShowcase = () => {
             width={300}
             height={500}
             loading="lazy"
-            className="w-full h-full object-cover  border border-secondary select-none pointer-events-none"
+            className="w-full h-full object-cover  border border-secondary select-none pointer-events-none rounded-md"
           />
         </div>
       ))}
