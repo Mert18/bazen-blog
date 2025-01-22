@@ -34,7 +34,7 @@ const SingleValkContent = ({ params }: ISingleValkContent) => {
         <div className="w-full">
           <PostHeader post={post} />
 
-          <div className="flex flex-col justify-center items-start md:py-4 xl:text-sm overflow-auto bg-primary p-4 border border-secondary ">
+          <div className="flex flex-col justify-center items-start md:py-4 xl:text-sm overflow-auto bg-primary p-4">
             <Mdx code={post.body.code} />
           </div>
           <div className="flex justify-between items-center">
