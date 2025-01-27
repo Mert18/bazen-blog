@@ -63,15 +63,17 @@ const ValkCard = ({
       >
         <div>
           <div className="flex w-full md:flex-row flex-col md:items-start items-center">
-            {image && (
-              <Image
-                src={image}
-                alt="Lycians pixel art"
-                width={300}
-                height={300}
-                className="mr-4 md:mb-0 mb-4"
-              />
-            )}
+            <div className="bg-white opacity-50 mr-4 md:mb-0 mb-4">
+              {image && (
+                <Image
+                  src={image}
+                  alt={title}
+                  width={300}
+                  height={300}
+                  className="p-1 border border-secondary"
+                />
+              )}
+            </div>
             <div className="flex flex-col justify-center md:items-start items-center w-full">
               <h1 className="font-bold text-base md:text-xl lg:text-2xl mb-4">
                 {title}

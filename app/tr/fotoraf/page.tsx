@@ -1,14 +1,14 @@
-import FotorafList from '@/components/fotoraf/FotorafList'
-import React from 'react'
+import FotorafContent from "@/components/page/FotorafContent";
+import React from "react";
 
 export const metadata = {
-  title: "bazen | fotoraf"
-}
+  title: "bazen | fotoraf",
+};
 
 const Fotoraf = () => {
   return (
-    <FotorafList />
-  )
-}
+      <FotorafContent />
+  );
+};
 
-export default Fotoraf
+export default Fotoraf;
