@@ -58,7 +58,7 @@ const PostCard = ({
         href={`/${language}/blog${slug}`}
       >
         <div className="flex w-full md:flex-row flex-col md:items-start items-center h-full">
-          <div className="bg-white opacity-50 mr-4 md:mb-0 mb-4">
+          <div className="bg-white opacity-90 mr-4 md:mb-0 mb-4">
             {image && (
               <Image
                 src={image}

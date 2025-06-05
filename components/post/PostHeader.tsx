@@ -24,7 +24,7 @@ const PostHeader = ({ post }: any) => {
         )}
       </div>
       {post.image && (
-        <div className="flex justify-center items-center border-2 border-secondary bg-white opacity-50">
+        <div className="flex justify-center items-center border-2 border-secondary bg-white opacity-90">
           <Image
             src={post.image}
             width={900}
