@@ -27,7 +27,7 @@ const ProgressBar = () => {
           aria-valuemax={100}
         >
           <p className="text-accent1 lg:text-sm text-xs font-bold">
-            %{percentage}
+            {percentage}%
           </p>
         </div>
       </div>
